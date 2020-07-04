@@ -1,0 +1,47 @@
+<launch>
+
+    <arg name="scan_topic" default="/scan" /> 
+    <arg name="laser_frame" default="base_laser" />
+    <arg name="odom_frame" default="odom" />
+    <arg name="base_frame" default="base_link" />
+    <arg name="map_frame" default="map" />
+
+    <arg name="respawn" default="true"/>
+    <arg name="debug" default="false"/>
+
+    <arg name="world_name" default="mowito"/>
+    <arg name="gui" default="true"/>
+
+
+
+    <!-- SIMULATION -->
+    <!-- rosbot and the rviz-->
+
+
+    <!-- the world -->
+
+   
+    <!-- NAVIGATION -->
+    <!-- mapping node-->
+    <include file="$(find mowito_files)/include/start_mw_mapping.launch">
+        <arg name="scan_topic" value="/scan" /> 
+        <arg name="laser_frame" value="base_laser" />
+        <arg name="odom_frame" value="odom" />
+        <arg name="base_frame" value="base_link" />
+        <arg name="map_frame" value="map" />
+    </include>
+
+    <!-- -for converting the odom msg to tf -->
+  
+    
+    <!-- nav server-->
+    <include file="$(find mowito_files)/include/start_nav_server.launch">
+        <arg name="mission_executive_config" value="$(find mowito_files)/config/mission_executive_config/standard_nav.yaml"/>
+        <arg name="respawn" value="$(arg respawn)"/>
+        <arg name="gp_debug" value="$(arg debug)"/>
+        <arg name="ctrl_debug" value="$(arg debug)"/>
+        <arg name="rcvr_debug" value="$(arg debug)"/>  
+    </include>
+
+   <node type="rviz" name="rviz" pkg="rviz" args="-d $(find mowito_files)/rviz/nav_no_map.rviz" />
+</launch>
