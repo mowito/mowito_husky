@@ -1,7 +1,7 @@
 global_costmap:
   global_frame: map
-  update_frequency: 5.0 #2.5
-  publish_frequency: 5.0 #2.5
+  update_frequency: 5 #2.5
+  publish_frequency: 5 #2.5
   transform_tolerance: 0.5
   width: 6
   height: 6
