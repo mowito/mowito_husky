@@ -16,11 +16,8 @@ Move the robot around using InteractiveMarkers, which can viewed in rviz.
 
 In a terminal (Source the files)
 
-```  $ roslaunch husky_gazebo husky_playpen.launch   ```
+```  $ roslaunch mowito_husky mowito_husky.launch   ```
 
-In a new terminal (Source the files,localise the robot) 
-
-```$ roslaunch   mowito_files sim_mw_navigation.launch ```
 
 ## For navigation without map
 
