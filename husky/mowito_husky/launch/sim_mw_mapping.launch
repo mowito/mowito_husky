@@ -1,4 +1,4 @@
-<launch>
+    <launch>
 
     <arg name="scan_topic" default="/scan" /> 
     <arg name="laser_frame" default="base_laser" />
@@ -8,6 +8,8 @@
     <arg name="cartographer" default="false" />
     <arg name="world_name" default="mowito"/>
     <arg name="gui" default="true"/>
+
+
 
     <!-- NAVIGATION -->
     <group unless="$(arg cartographer)">
