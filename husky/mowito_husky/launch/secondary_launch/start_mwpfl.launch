@@ -3,7 +3,7 @@
     <arg name="sim"             default="false" /> 
     <arg name="scan_topic"      default="/scan"/>
     <arg name="laser_frame"     default="base_laser" />
-    <arg name="map_address"     default="$(find mowito_files)/maps/new_map.yaml" />
+    <arg name="map_address"     default="$(find mowito_husky)/maps/new_map.yaml" />
     <arg name="robot_init_x"    default="0"/>
     <arg name="robot_init_y"    default="0"/>
     <arg name="robot_init_phi"  default="0"/>
