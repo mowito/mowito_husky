@@ -46,7 +46,7 @@ trajectory_planner:
   escape_reset_theta: 1.57079632679
   escape_vel: -0.1
 
-  dwa: false
+  dwa: true
   heading_scoring: false
   heading_scoring_timestep: 0.1
 
