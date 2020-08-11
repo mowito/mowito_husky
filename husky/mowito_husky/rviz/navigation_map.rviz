@@ -265,7 +265,7 @@ Visualization Manager:
       Marker Topic: /goal_queue
       Name: MarkerArray
       Namespaces:
-        goal_queue: true
+        {}
       Queue Size: 100
       Value: true
     - Class: Submaps
@@ -348,25 +348,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 9.419844627380371
+      Distance: 20.824277877807617
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -3.1952664852142334
-        Y: -2.664421319961548
-        Z: 0.3519073724746704
+        X: -1.2447881698608398
+        Y: -0.12019249051809311
+        Z: -0.055992528796195984
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.3697963953018188
+      Pitch: 1.5697963237762451
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.02039148285984993
+      Yaw: 0.0003914833068847656
     Saved: ~
 Window Geometry:
   Displays:

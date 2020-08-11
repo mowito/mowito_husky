@@ -13,8 +13,8 @@ trajectory_planner:
   acc_lim_theta: 3.2
 
 # Goal Tolerance Parameters
-  xy_goal_tolerance: 0.05
-  yaw_goal_tolerance: 0.1
+  xy_goal_tolerance: 0.1
+  yaw_goal_tolerance: 0.15
   latch_xy_goal_tolerance: false
 
 # Differential-drive robot configuration
@@ -22,11 +22,11 @@ trajectory_planner:
 
 # Forward Simulation Parameters
   sim_time: 3.0
-  vx_samples: 20
+  vx_samples: 10
   vtheta_samples: 30
-  sim_granularity: 0.025
-  angular_sim_granularity: 0.025
-  heading_lookahead: 0.325
+  sim_granularity: 0.03
+  angular_sim_granularity: 0.03
+  heading_lookahead: 0.5
   controller_frequency: 10.0
 
 # Robot Footprint
@@ -37,7 +37,7 @@ trajectory_planner:
     padding: 0.01
 
 # Cost Weights
-  pdist_scale: 1 # higher weight make the stick to global path
+  pdist_scale: 0.8 # higher weight make the stick to global path
   gdist_scale: 1
   occdist_scale: 0.2
 
