@@ -10,7 +10,7 @@
   <arg name="x" default="0.0"/>
   <arg name="y" default="0.0"/>
   <arg name="z" default="0.0"/>
-  <arg name="phi" default="0.0"/>
+  <arg name="phi" default="1.5708"/>
 
   <!-- for mw mapping-->
   <arg name="odom_frame" default="odom" />

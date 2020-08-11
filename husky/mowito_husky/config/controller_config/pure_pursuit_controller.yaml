@@ -5,7 +5,7 @@ pure_pursuit_controller:
   max_vel: 0.2
   min_vel: 0.1
   max_omega: 0.5
-  max_turn_radius: 0.2
+  max_turn_radius: 2.5
   min_turn_radius: 0.1
   max_radius_omega: 20.0
   max_y_deviation: 0.05
@@ -13,5 +13,7 @@ pure_pursuit_controller:
   max_theta_deviation: 0.5
   transform_tolerance: 0.5
   holonomic_robot: false #true
+  drive_type: 'differential'
+  on_the_spot_turn_allowed: false
 
 

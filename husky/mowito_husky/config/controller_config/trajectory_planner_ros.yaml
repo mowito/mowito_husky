@@ -13,7 +13,7 @@ trajectory_planner:
   acc_lim_theta: 3.2
 
 # Goal Tolerance Parameters
-  xy_goal_tolerance: 0.05
+  xy_goal_tolerance: 0.2
   yaw_goal_tolerance: 0.1
   latch_xy_goal_tolerance: false
 
@@ -21,13 +21,13 @@ trajectory_planner:
   holonomic_robot: false
 
 # Forward Simulation Parameters
-  sim_time: 3.0
-  vx_samples: 20
-  vtheta_samples: 30
-  sim_granularity: 0.025
-  angular_sim_granularity: 0.025
+  sim_time: 2.0
+  vx_samples: 6
+  vtheta_samples: 20
+  sim_granularity: 0.02
+  angular_sim_granularity: 0.02
   heading_lookahead: 0.325
-  controller_frequency: 10.0
+  controller_frequency: 20.0
 
 # Robot Footprint
   footprint_model: # types: "point", "circular", "two_circles", "line", "polygon"
@@ -37,9 +37,9 @@ trajectory_planner:
     padding: 0.01
 
 # Cost Weights
-  pdist_scale: 1 # higher weight make the stick to global path
-  gdist_scale: 1
-  occdist_scale: 0.2
+  pdist_scale: 0.75 # higher weight make the stick to global path
+  gdist_scale: 1.0
+  occdist_scale: 0.1
 
   oscillation_reset_dist: 0.25
   escape_reset_dist: 0.10
@@ -48,7 +48,7 @@ trajectory_planner:
 
   dwa: true
   heading_scoring: false
-  heading_scoring_timestep: 0.1
+  heading_scoring_timestep: 0.8
 
   simple_attractor: false
 
