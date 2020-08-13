@@ -82,9 +82,9 @@
     <group if="$(arg cartographer)">
     <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
-          -configuration_directory $(find mowito_files)/config/carto_config
+          -configuration_directory $(find mowito_husky)/config/carto_config
           -configuration_basename husky_localization.lua
-          -load_state_filename $(find mowito_files)/maps/husky_playpen.pbstream"
+          -load_state_filename $(find mowito_husky)/maps/husky_playpen.pbstream"
       output="screen">
     	<remap from="imu" to="imu/data" />
     	<remap from="odom" to="odometry/filtered" />

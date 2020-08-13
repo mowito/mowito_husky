@@ -23,8 +23,6 @@
 
   <arg name="gui" default="true"/>
 
-  <arg name="cartographer" default="false" />
-
   <arg name="laser_enabled" default="$(optenv HUSKY_LMS1XX_ENABLED true)"/>
   <arg name="kinect_enabled" default="$(optenv HUSKY_KINECT_ENABLED false)"/>
   <arg name="realsense_enabled" default="$(optenv HUSKY_REALSENSE_ENABLED false)"/>
