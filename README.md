@@ -38,3 +38,6 @@ In a terminal (Source the files)
 In a terminal (Source the files)
 
 ```  $  roslaunch mowito_files sim_mw_mapping_with_explore ```
+
+## For using velodyne sensor
+Clone [velodyne_simulator](https://bitbucket.org/DataspeedInc/velodyne_simulator/src/master/) package in the workspace and do catkin build 

@@ -12,30 +12,34 @@
   <arg name="z" default="0.0"/>
   <arg name="phi" default="0.0"/>
 
-  <arg name="laser_enabled" default="$(optenv HUSKY_LMS1XX_ENABLED true)"/>
-  <arg name="kinect_enabled" default="$(optenv HUSKY_KINECT_ENABLED false)"/>
-  <arg name="realsense_enabled" default="$(optenv HUSKY_REALSENSE_ENABLED false)"/>
+  <arg name="laser_enabled" default="true"/>
+  <arg name="kinect_enabled" default="false"/>
+  <arg name="realsense_enabled" default="false"/>
+  <arg name="velodyne16_enabled" default="true"/>
+  <arg name="velodyne32_enabled" default="false"/>
 
   <arg name="map_path" default="$(find mowito_husky)/maps/playpen_map.yaml"/>
   <arg name="respawn" default="true"/>
   <arg name="debug" default="false"/>
   <arg name="world_name" default="mowito"/>
-    <arg name="gui" default="false"/>
-    <arg name="cartographer" default="false" />
+  <arg name="gui" default="false"/>
+  <arg name="cartographer" default="false" />
 
 <!-- Global Param -->
   <param name="robot_description" command="$(find xacro)/xacro '$(find husky_description)/urdf/husky.urdf.xacro'
     robot_namespace:=$(arg robot_namespace)
     laser_enabled:=$(arg laser_enabled)
     kinect_enabled:=$(arg kinect_enabled)
-    realsense_enabled:=$(arg realsense_enabled)" />
+    realsense_enabled:=$(arg realsense_enabled)
+    velodyne16_enabled:=$(arg velodyne16_enabled)
+    velodyne32_enabled:=$(arg velodyne32_enabled)" />
 
   <rosparam command="load" file="$(find husky_control)/config/control.yaml" />
 
 
 <!-- Gazebo world and robot-->
   <include file="$(find husky_gazebo)/launch/playpen.launch">
-    <args name="gui" value="$(arg gui)" />
+    <arg name="gui" value="$(arg gui)" />
     <arg name="use_sim_time" value="$(arg sim)"/>
   </include>
   
