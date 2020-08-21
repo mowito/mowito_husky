@@ -15,8 +15,7 @@
   <arg name="laser_enabled" default="true"/>
   <arg name="kinect_enabled" default="false"/>
   <arg name="realsense_enabled" default="false"/>
-  <arg name="velodyne16_enabled" default="true"/>
-  <arg name="velodyne32_enabled" default="false"/>
+  <arg name="velodyne_enabled" default="false"/>
 
   <arg name="map_path" default="$(find mowito_husky)/maps/playpen_map.yaml"/>
   <arg name="respawn" default="true"/>
@@ -31,8 +30,7 @@
     laser_enabled:=$(arg laser_enabled)
     kinect_enabled:=$(arg kinect_enabled)
     realsense_enabled:=$(arg realsense_enabled)
-    velodyne16_enabled:=$(arg velodyne16_enabled)
-    velodyne32_enabled:=$(arg velodyne32_enabled)" />
+    velodyne_enabled:=$(arg velodyne_enabled)" />
 
   <rosparam command="load" file="$(find husky_control)/config/control.yaml" />
 
