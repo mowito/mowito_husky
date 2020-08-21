@@ -11,13 +11,14 @@
       https://bitbucket.org/DataspeedInc/velodyne_simulator/src/master/-->
   <arg name="use_velodyne" default="false"/>
 
+  <!-- -for husky model -->
   <arg name="x" default="0.0"/>
   <arg name="y" default="0.0"/>
   <arg name="z" default="0.0"/>
   <arg name="phi" default="0.0"/>
 
 <!-- The following lines can be used when the localization is done using velodyne sensor
-      data and there is no need for laser scan in entire simulation
+      data and there is no need for laserscan msg (from other LiDAR) in entire simulation
   <arg name="laser_enabled" default="false" if="$(arg use_velodyne)"/>
   <arg name="laser_enabled" default="true" unless="$(arg use_velodyne"/>
 -->
@@ -26,6 +27,8 @@
   <arg name="kinect_enabled" default="false"/>
   <arg name="realsense_enabled" default="false"/>
   <arg name="velodyne_enabled" default="$(arg use_velodyne)"/>
+
+    <!-- for nav server-->
 
   <arg name="map_path" default="$(find mowito_husky)/maps/playpen_map.yaml"/>
   <arg name="respawn" default="true"/>
@@ -97,7 +100,7 @@
           -configuration_directory $(find mowito_husky)/config/carto_config
           -configuration_basename husky_localization.lua
           -load_state_filename $(find mowito_husky)/maps/husky_playpen.pbstream"
-      output="screen">
+      output="log">
     	<remap from="imu" to="imu/data" />
     	<remap from="odom" to="odometry/filtered" />
     </node>

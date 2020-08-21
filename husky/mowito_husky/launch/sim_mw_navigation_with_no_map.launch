@@ -6,11 +6,31 @@
   <arg name="scan_topic" default="/scan"/>
   <arg name="laser_frame" default="base_laser"/>
   
+
+  <!--for using velodyne, download and build velodyne_simulator from
+      https://bitbucket.org/DataspeedInc/velodyne_simulator/src/master/-->
+  <arg name="use_velodyne" default="false"/>
+
   <!-- -for husky model -->
   <arg name="x" default="0.0"/>
   <arg name="y" default="0.0"/>
   <arg name="z" default="0.0"/>
   <arg name="phi" default="0.0"/>
+
+
+<!-- The following lines can be used when the localization is done using velodyne sensor
+      data and there is no need for laserscan msg (from other LiDAR) in entire simulation
+  <arg name="laser_enabled" default="false" if="$(arg use_velodyne)"/>
+  <arg name="laser_enabled" default="true" unless="$(arg use_velodyne"/>
+-->
+
+  <arg name="laser_enabled" default="false" if="$(arg use_velodyne)"/>
+  <arg name="laser_enabled" default="true" unless="$(arg use_velodyne)"/>
+
+<!--   <arg name="laser_enabled" default="true"/> -->
+  <arg name="kinect_enabled" default="false"/>
+  <arg name="realsense_enabled" default="false"/>
+  <arg name="velodyne_enabled" default="$(arg use_velodyne)"/>
 
   <!-- for mw mapping-->
   <arg name="odom_frame" default="odom" />
@@ -20,21 +40,18 @@
   <!-- for nav server-->
   <arg name="debug" default="false" />
   <arg name="respawn" value="true"/>
-
   <arg name="gui" default="true"/>
 
   <arg name="cartographer" default="false" />
 
-  <arg name="laser_enabled" default="$(optenv HUSKY_LMS1XX_ENABLED true)"/>
-  <arg name="kinect_enabled" default="$(optenv HUSKY_KINECT_ENABLED false)"/>
-  <arg name="realsense_enabled" default="$(optenv HUSKY_REALSENSE_ENABLED false)"/>
 
 <!-- Global Param -->
   <param name="robot_description" command="$(find xacro)/xacro '$(find husky_description)/urdf/husky.urdf.xacro'
     robot_namespace:=$(arg robot_namespace)
     laser_enabled:=$(arg laser_enabled)
     kinect_enabled:=$(arg kinect_enabled)
-    realsense_enabled:=$(arg realsense_enabled)" />
+    realsense_enabled:=$(arg realsense_enabled)
+    velodyne_enabled:=$(arg velodyne_enabled)" />
 
   <rosparam command="load" file="$(find husky_control)/config/control.yaml" />
 
