@@ -4,10 +4,11 @@
   <arg name="rcvr_debug" default="false"/>
   <arg name="respawn" default="false"/>
   <arg name="output_log" default="screen"/>
+  <arg name="use_velodyne" default="false"/>
 
   <arg name="mission_executive_config" default="$(find mowito_husky)/config/mission_executive_config/mission_executive_params.yaml"/>
 
-  <node pkg="timed_roslaunch" type="timed_roslaunch.sh" args="10 $(find mowito_husky)/launch/secondary_launch/start_costmap.launch"
+  <node pkg="timed_roslaunch" type="timed_roslaunch.sh" args="10 $(find mowito_husky)/launch/secondary_launch/start_costmap.launch use_velodyne:=$(arg use_velodyne)"
         name="costmap_launcher" output="screen"/>
 
   <include file="$(find mowito_husky)/launch/secondary_launch/start_global_planner.launch">

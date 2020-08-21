@@ -7,15 +7,25 @@
   <arg name="scan_topic" default="/scan"/>
   <arg name="laser_frame" default="base_laser"/>
 
+  <!--for using velodyne, download and build velodyne_simulator from
+      https://bitbucket.org/DataspeedInc/velodyne_simulator/src/master/-->
+  <arg name="use_velodyne" default="false"/>
+
   <arg name="x" default="0.0"/>
   <arg name="y" default="0.0"/>
   <arg name="z" default="0.0"/>
   <arg name="phi" default="0.0"/>
 
+<!-- The following lines can be used when the localization is done using velodyne sensor
+      data and there is no need for laser scan in entire simulation
+  <arg name="laser_enabled" default="false" if="$(arg use_velodyne)"/>
+  <arg name="laser_enabled" default="true" unless="$(arg use_velodyne"/>
+-->
+
   <arg name="laser_enabled" default="true"/>
   <arg name="kinect_enabled" default="false"/>
   <arg name="realsense_enabled" default="false"/>
-  <arg name="velodyne_enabled" default="false"/>
+  <arg name="velodyne_enabled" default="$(arg use_velodyne)"/>
 
   <arg name="map_path" default="$(find mowito_husky)/maps/playpen_map.yaml"/>
   <arg name="respawn" default="true"/>
@@ -102,7 +112,8 @@
         <arg name="respawn" value="$(arg respawn)"/>
         <arg name="gp_debug" value="$(arg debug)"/>
         <arg name="ctrl_debug" value="$(arg debug)"/>  
-        <arg name="rcvr_debug" value="$(arg debug)"/>        
+        <arg name="rcvr_debug" value="$(arg debug)"/>       
+        <arg name="use_velodyne" value="$(arg use_velodyne)"/> 
     </include>
     
 
