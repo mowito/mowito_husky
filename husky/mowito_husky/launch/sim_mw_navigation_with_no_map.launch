@@ -104,6 +104,7 @@
           -configuration_directory $(find mowito_husky)/config/carto_config
           -configuration_basename husky.lua"
       output="screen">
+      <remap from="points2" to="/velodyne_points" />
     	<remap from="imu" to="imu/data" />
     	<remap from="odom" to="odometry/filtered" />
     </node>
@@ -113,6 +114,7 @@
     </group>
 
     <!-- nav server-->
+
     <include file="$(find mowito_husky)/launch/secondary_launch/start_nav_server.launch">
         <arg name="mission_executive_config" value="$(find mowito_husky)/config/mission_executive_config/mission_executive_params.yaml"/>
         <arg name="respawn" value="$(arg respawn)"/>
@@ -120,6 +122,5 @@
         <arg name="ctrl_debug" value="$(arg debug)"/>
         <arg name="rcvr_debug" value="$(arg debug)"/>  
     </include>
-
 
 </launch>
