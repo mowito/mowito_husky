@@ -115,7 +115,7 @@
     </group>
 
     <!-- nav server-->
-<!--
+
     <include file="$(find mowito_husky)/launch/secondary_launch/start_nav_server.launch">
         <arg name="mission_executive_config" value="$(find mowito_husky)/config/mission_executive_config/mission_executive_params.yaml"/>
         <arg name="respawn" value="$(arg respawn)"/>
@@ -124,8 +124,7 @@
         <arg name="rcvr_debug" value="$(arg debug)"/>  
         <arg name="use_velodyne" value="$(arg use_velodyne)"/> 
     </include>
--->
 
-<!--   <node pkg="timed_roslaunch" type="timed_roslaunch.sh" args="10 $(find mowito_husky)/launch/secondary_launch/start_costmap.launch use_velodyne:=$(arg use_velodyne)"
-        name="costmap_launcher" output="screen"/> -->
+
+
 </launch>
