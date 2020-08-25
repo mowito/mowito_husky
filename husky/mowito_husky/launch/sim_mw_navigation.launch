@@ -9,7 +9,7 @@
 
   <!--for using velodyne, download and build velodyne_simulator from
       https://bitbucket.org/DataspeedInc/velodyne_simulator/src/master/-->
-  <arg name="use_velodyne" default="false"/>
+  <arg name="use_velodyne" default="true"/>
 
   <!-- -for husky model -->
   <arg name="x" default="0.0"/>
@@ -35,7 +35,8 @@
   <arg name="debug" default="false"/>
   <arg name="world_name" default="mowito"/>
   <arg name="gui" default="false"/>
-  <arg name="cartographer" default="false" />
+
+  <arg name="cartographer" default="true" />
 
 <!-- Global Param -->
   <param name="robot_description" command="$(find xacro)/xacro '$(find husky_description)/urdf/husky.urdf.xacro'

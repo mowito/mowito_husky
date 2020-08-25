@@ -9,7 +9,7 @@
 
   <!--for using velodyne, download and build velodyne_simulator from
       https://bitbucket.org/DataspeedInc/velodyne_simulator/src/master/-->
-  <arg name="use_velodyne" default="false"/>
+  <arg name="use_velodyne" default="true"/>
 
   <!-- -for husky model -->
   <arg name="x" default="0.0"/>
@@ -42,7 +42,7 @@
   <arg name="respawn" value="true"/>
   <arg name="gui" default="true"/>
 
-  <arg name="cartographer" default="false" />
+  <arg name="cartographer" default="true" />
 
 
 <!-- Global Param -->
@@ -103,7 +103,7 @@
       type="cartographer_node" args="
           -configuration_directory $(find mowito_husky)/config/carto_config
           -configuration_basename husky.lua"
-      output="screen">
+      output="log">
       <remap from="points2" to="/velodyne_points" />
     	<remap from="imu" to="/imu/data" />
     	<!-- <remap from="odom" to="odometry/filtered" /> -->
@@ -111,7 +111,7 @@
     </node>
 
     <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
-      type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
+      type="cartographer_occupancy_grid_node" args="-resolution 0.05" output="log" />
     </group>
 
     <!-- nav server-->
