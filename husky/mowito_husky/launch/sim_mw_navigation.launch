@@ -102,8 +102,10 @@
           -configuration_basename husky_localization.lua
           -load_state_filename $(find mowito_husky)/maps/husky_playpen.pbstream"
       output="log">
-    	<remap from="imu" to="imu/data" />
-    	<remap from="odom" to="odometry/filtered" />
+      <remap from="points2" to="/velodyne_points" />
+      <remap from="imu" to="/imu/data" />
+      <!-- <remap from="odom" to="odometry/filtered" /> -->
+      <remap from="odom" to="odom" />
     </node>
 
     <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
