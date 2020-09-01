@@ -120,6 +120,7 @@
         <arg name="ctrl_debug" value="$(arg debug)"/>  
         <arg name="rcvr_debug" value="$(arg debug)"/>       
         <arg name="use_velodyne" value="$(arg use_velodyne)"/> 
+        <arg name="ctrl_frequency" value="5"/>
     </include>
     
 

@@ -2,7 +2,8 @@
   <arg name="debug" default="false"/>
   <arg name="respawn" default="false"/>
   <arg name="output_log" default="screen"/>
-
+  <arg name="ctrl_frequency" default="10"/>
+  
   <env name="ROSCONSOLE_CONFIG_FILE" value="$(find controller_executive)/custom_config.conf" if="$(arg debug)"/>
   
   <node name="controller_executive" type="controller_action_node" pkg="controller_executive" output="$(arg output_log)" respawn="$(arg respawn)">
@@ -13,7 +14,7 @@
     <param name="tf_timeout"            type="double" value="1.0"/>
     <param name="robot_frame"           type="string" value="base_link"/>
     <param name="map_frame"             type="string" value="map"/>
-    <param name="controller_frequency"  type="double" value="5"/>
+    <param name="controller_frequency"  type="double" value="$(arg ctrl_frequency"/>
     
     <rosparam command="load" file="$(find mowito_husky)/config/controller_config/controller_action_server_params.yaml"/>
     <rosparam command="load" file="$(find mowito_husky)/config/controller_config/trajectory_planner_ros.yaml"/>
