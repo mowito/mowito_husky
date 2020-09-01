@@ -102,7 +102,7 @@
     <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory $(find mowito_husky)/config/carto_config
-          -configuration_basename husky.lua"
+          -configuration_basename husky_2.lua"
       output="log">
       <remap from="points2" to="/velodyne_points" />
     	<remap from="imu" to="/imu/data" />
