@@ -5,6 +5,7 @@
   <arg name="respawn" default="false"/>
   <arg name="output_log" default="screen"/>
   <arg name="use_velodyne" default="false"/>
+  <arg name="ctrl_frequency" default="10"/>
 
   <arg name="mission_executive_config" default="$(find mowito_husky)/config/mission_executive_config/mission_executive_params.yaml"/>
 
@@ -21,6 +22,7 @@
     <arg name="debug" value="$(arg ctrl_debug)"/>
     <arg name="respawn" value="$(arg respawn)"/>
     <arg name="output_log" value="$(arg output_log)"/>
+    <arg name="ctrl_frequency" value="$(arg ctrl_frequency)"/>
   </include>
 
 
