@@ -85,7 +85,7 @@
       type="cartographer_node" args="
           -configuration_directory $(find mowito_husky)/config/carto_config
           -configuration_basename husky.lua"
-      output="screen">
+      output="log">
     	<remap from="imu" to="imu/data" />
     	<!-- <remap from="odom" to="odometry/filtered" /> -->
       <remap from="odom" to="odom" />
