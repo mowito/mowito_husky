@@ -46,7 +46,8 @@
 
 
 <!-- Rviz robot and map-->
-  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find mowito_husky)/rviz/navigation_map.rviz" />
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find mowito_husky)/rviz/rviz_maxl.rviz" />
+  <!-- <node type="rviz" name="rviz" pkg="rviz" args="-d $(find mowito_husky)/rviz/navigation_map.rviz" /> -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 
