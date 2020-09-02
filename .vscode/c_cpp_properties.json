@@ -1,0 +1,39 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/ampho/mowito_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/ampho/mowito_ws/src/chief_executive/include/**",
+        "/home/ampho/mowito_ws/src/controller/include/**",
+        "/home/ampho/mowito_ws/src/costmap2d/include/**",
+        "/home/ampho/mowito_ws/src/local_diagnostic/include/**",
+        "/home/ampho/mowito_ws/src/executive/include/**",
+        "/home/ampho/mowito_ws/src/mowito_husky/husky/husky_base/include/**",
+        "/home/ampho/mowito_ws/src/map_exploration/include/**",
+        "/home/ampho/mowito_ws/src/mlicense/include/**",
+        "/home/ampho/mowito_ws/src/mowito_husky/husky/mowito_husky/include/**",
+        "/home/ampho/mowito_ws/src/turtle_mowito/mowito_turtlebot/include/**",
+        "/home/ampho/mowito_ws/src/mw_core/include/**",
+        "/home/ampho/mowito_ws/src/global_planner/include/**",
+        "/home/ampho/mowito_ws/src/mw_maxl/include/**",
+        "/home/ampho/mowito_ws/src/mw_navfn_planner/include/**",
+        "/home/ampho/mowito_ws/src/mw_random_navigation/include/**",
+        "/home/ampho/mowito_ws/src/mw_teb/include/**",
+        "/home/ampho/mowito_ws/src/localization/mwpfl/include/**",
+        "/home/ampho/mowito_ws/src/mapping/openslam_gmapping/include/**",
+        "/home/ampho/mowito_ws/src/recovery_executive/include/**",
+        "/home/ampho/mowito_ws/src/task_executive/include/**",
+        "/home/ampho/mowito_ws/src/turtle_mowito/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/ampho/mowito_ws/src/turtle_mowito/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/ampho/mowito_ws/src/turtle_mowito/turtlebot3/turtlebot3_slam/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ]
+}
