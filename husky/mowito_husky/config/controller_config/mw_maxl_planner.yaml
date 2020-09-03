@@ -3,8 +3,7 @@ mw_maxl_planner:
   odomTopic: "/odom"
   plot_path: true
 
-  pathFolder: "/home/ampho/mowito_ws/src/mw_maxl/paths"
-  
+  pathFolder: $(find mw_maxl_planner)/paths
   autonomyMode: true
   map_frame: "map"
   robot_frame: "base_link"
