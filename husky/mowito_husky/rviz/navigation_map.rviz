@@ -64,16 +64,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        base_laser:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        base_laser_mount:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         base_link:
           Alpha: 1
           Show Axes: false
@@ -275,7 +265,7 @@ Visualization Manager:
       Marker Topic: /goal_queue
       Name: MarkerArray
       Namespaces:
-        {}
+        goal_queue: true
       Queue Size: 100
       Value: true
     - Class: Submaps
@@ -287,29 +277,6 @@ Visualization Manager:
       Submap query service: /submap_query
       Submaps:
         All: true
-        Trajectory 0:
-          0.180: true
-          1.180: true
-          10.180: true
-          11.180: true
-          12.180: true
-          13.180: true
-          14.180: true
-          15.180: true
-          16.129: true
-          17.39: true
-          2.180: true
-          3.180: true
-          4.180: true
-          5.180: true
-          6.180: true
-          7.180: true
-          8.180: true
-          9.180: true
-          Value: true
-        Trajectory 1:
-          0.2: true
-          Value: true
       Topic: /submap_list
       Tracking frame: base_link
       Unreliable: false
@@ -353,7 +320,7 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.009999999776482582
+      Size (m): 0.05000000074505806
       Style: Flat Squares
       Topic: /velodyne_points
       Unreliable: false
@@ -388,16 +355,16 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 20.824277877807617
+      Distance: 19.544292449951172
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -1.2447881698608398
-        Y: -0.12019249051809311
-        Z: -0.055992528796195984
+        X: 1.4606328010559082
+        Y: 1.706260323524475
+        Z: -0.05869870260357857
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false

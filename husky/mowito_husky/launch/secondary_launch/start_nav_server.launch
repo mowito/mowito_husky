@@ -2,7 +2,7 @@
   <arg name="gp_debug" default="false"/>
   <arg name="ctrl_debug" default="false"/>
   <arg name="rcvr_debug" default="false"/>
-  <arg name="respawn" default="false"/>
+  <arg name="respawn" default="true"/>
   <arg name="output_log" default="screen"/>
   <arg name="use_velodyne" default="false"/>
   <arg name="ctrl_frequency" default="10"/>

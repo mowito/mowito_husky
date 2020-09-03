@@ -14,7 +14,8 @@ trajectory_planner:
 
 # Goal Tolerance Parameters
   xy_goal_tolerance: 0.1
-  yaw_goal_tolerance: 0.15
+  # yaw_goal_tolerance: 0.15
+  yaw_goal_tolerance: 0.45
   latch_xy_goal_tolerance: false
 
 # Differential-drive robot configuration
