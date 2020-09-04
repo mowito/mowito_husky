@@ -26,5 +26,5 @@ mw_maxl_planner:
   sensorOffsetX: 0.1
 #  sensorOffsetY: 
 
-  maxSpeed: 0.4
-  maxAccel: 0.5
+  maxSpeed: 1.0 #0.4
+  maxAccel: 3.0 #0.5
