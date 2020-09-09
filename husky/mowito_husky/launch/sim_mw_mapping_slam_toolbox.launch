@@ -56,7 +56,7 @@
 
 <!-- Gazebo world and robot-->
   <include file="$(find husky_gazebo)/launch/playpen.launch">
-    <args name="gui" value="$(arg gui)" />
+    <arg name="gui" value="$(arg gui)" />
     <arg name="use_sim_time" value="$(arg sim)"/>
   </include>
   
