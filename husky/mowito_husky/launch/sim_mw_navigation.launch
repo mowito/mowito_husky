@@ -23,21 +23,23 @@
   <arg name="world_name" default="mowito"/>
   <arg name="gui" default="false"/>
   <arg name="cartographer" default="false" />
+  <arg name="urdf_extras" default="$(optenv HUSKY_URDF_EXTRAS)"/>
 
 <!-- Global Param -->
   <param name="robot_description" command="$(find xacro)/xacro '$(find husky_description)/urdf/husky.urdf.xacro'
+    --inorder
     robot_namespace:=$(arg robot_namespace)
     laser_enabled:=$(arg laser_enabled)
-    kinect_enabled:=$(arg kinect_enabled)
     realsense_enabled:=$(arg realsense_enabled)
-    velodyne_enabled:=$(arg velodyne_enabled)" />
+    urdf_extras:=$(arg urdf_extras)
+    " />
 
   <rosparam command="load" file="$(find husky_control)/config/control.yaml" />
 
 
 <!-- Gazebo world and robot-->
   <include file="$(find husky_gazebo)/launch/playpen.launch">
-    <arg name="gui" value="$(arg gui)" />
+      <arg name="gui" value="$(arg gui)" />
     <arg name="use_sim_time" value="$(arg sim)"/>
   </include>
   
