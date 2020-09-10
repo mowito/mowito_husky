@@ -24,7 +24,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: Maxl Free Paths
+    SyncSource: LaserScan
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -265,7 +265,7 @@ Visualization Manager:
       Marker Topic: /goal_queue
       Name: MarkerArray
       Namespaces:
-        goal_queue: true
+        {}
       Queue Size: 100
       Value: true
     - Class: Submaps
@@ -433,10 +433,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.5697963237762451
+      Pitch: 1.5647963285446167
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.0003914833068847656
+      Yaw: 3.1203901767730713
     Saved: ~
 Window Geometry:
   Displays:
