@@ -10,9 +10,12 @@ mw_maxl_planner:
   velodyne_frame: "velodyne"
   laser_frame: "base_laser"
 
+  #high accuracy multiplier for reaching the goal. Takes a value between (0, 1]
+  high_accuracy_multiplier: 0.8
+
   lookahead_goal_on_path: true
   min_lookahead: 0.2
-  max_lookahead: 2.0
+  max_lookahead: 1.0
   closest_point_index_search: 10
   max_y_deviation: 1.0
   min_radius: 0.1
