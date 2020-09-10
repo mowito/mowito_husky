@@ -28,3 +28,6 @@ mw_maxl_planner:
 
   maxSpeed: 1.0 #0.4
   maxAccel: 3.0 #0.5
+
+  direction_weight: 0.16    # 0.08 #0.02        # weight to change in direction
+  direction_threshold: 120      # in degrees
