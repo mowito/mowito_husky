@@ -11,13 +11,13 @@ mw_maxl_planner:
   laser_frame: "base_laser"
 
   #high accuracy multiplier for reaching the goal. Takes a value between (0, 1]
-  high_accuracy_multiplier: 0.8
+  high_accuracy_multiplier: 0.6
 
   lookahead_goal_on_path: true
   min_lookahead: 0.2
   max_lookahead: 1.0
   closest_point_index_search: 10
-  max_y_deviation: 1.0
+  max_y_deviation: 0.7
   min_radius: 0.1
   max_radius: 1.0
   max_omega_radius: 1.0

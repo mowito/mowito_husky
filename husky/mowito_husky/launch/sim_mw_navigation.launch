@@ -21,7 +21,7 @@
   <arg name="respawn" default="true"/>
   <arg name="debug" default="false"/>
   <arg name="world_name" default="mowito"/>
-  <arg name="gui" default="false"/>
+  <arg name="gui" default="true"/>
   <arg name="cartographer" default="false" />
 
 <!-- Global Param -->
