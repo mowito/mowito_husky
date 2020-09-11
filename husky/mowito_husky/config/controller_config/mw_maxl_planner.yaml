@@ -14,8 +14,8 @@ mw_maxl_planner:
   high_accuracy_multiplier: 0.8
 
   lookahead_goal_on_path: true
-  min_lookahead: 0.2
-  max_lookahead: 1.0
+  min_lookahead: 1.5
+  max_lookahead: 3
   closest_point_index_search: 10
   max_y_deviation: 1.0
   min_radius: 0.1
@@ -29,5 +29,8 @@ mw_maxl_planner:
   sensorOffsetX: 0.1
 #  sensorOffsetY: 
 
-  maxSpeed: 0.4
-  maxAccel: 0.5
+  maxSpeed: 1.0 #0.4
+  maxAccel: 3.0 #0.5
+
+  direction_weight: 0.16    # 0.08 #0.02        # weight to change in direction
+  direction_threshold: 120      # in degrees
