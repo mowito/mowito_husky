@@ -265,7 +265,7 @@ Visualization Manager:
       Marker Topic: /goal_queue
       Name: MarkerArray
       Namespaces:
-        {}
+        goal_queue: true
       Queue Size: 100
       Value: true
     - Class: Submaps
