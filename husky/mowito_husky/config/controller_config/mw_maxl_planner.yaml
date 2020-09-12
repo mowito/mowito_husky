@@ -21,8 +21,8 @@ mw_maxl_planner:
   max_path_dev: 1.0
   lookahead_point_distance: 0.1 
 
-  vehicleLength: 0.990
-  vehicleWidth: 0.670
+  vehicleLength: 2.0    # 0.990
+  vehicleWidth: 1.4     # 0.670
   sensorOffsetX: 0.1    # not having effect
   sensorOffsetY: 0      # not having effect
 
