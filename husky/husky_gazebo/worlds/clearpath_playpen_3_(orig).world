@@ -3904,7 +3904,7 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <!-- <model name='/'>
+    <model name='/'>
       <link name='base_link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
@@ -4496,7 +4496,7 @@
         <drift>0.0001 0.0001 0.0001</drift>
       </plugin>
       <pose frame=''>0 0 0 0 -0 0</pose>
-    </model>-->
+    </model>
     <light name='user_point_light_0' type='point'>
       <pose frame=''>8.24733 -6.71561 1 0 -0 0</pose>
       <diffuse>0.5 0.5 0.5 1</diffuse>
