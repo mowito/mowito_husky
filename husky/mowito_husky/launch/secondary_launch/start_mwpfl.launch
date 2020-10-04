@@ -13,7 +13,7 @@
      <!-- MAP SERVER -->
     <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_address)" output="screen" />
 
-    <!-- AMCL -->
+    <!-- MWPFL -->
     <node pkg="mwpfl" type="mwpfl" name="mwpfl" output="screen">
 	    <remap from="initialpose"               to="initialpose" />
         <param name="min_particles"             value="2000"/>
