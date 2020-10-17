@@ -10,8 +10,8 @@ mw_maxl_planner:
   velodyne_frame: "velodyne"
   laser_frame: "base_laser"
 
-
-  lookahead_goal_on_path: false #true #false 
+  #Set false to disable lookahead calculations
+  lookahead_goal_on_path: true #true #false 
   min_lookahead: 2.0
   max_lookahead: 3
   closest_point_index_search: 10
