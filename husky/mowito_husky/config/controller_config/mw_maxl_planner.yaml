@@ -52,3 +52,15 @@ mw_maxl_planner:
   #enable visualisation of detailed data (pointcloud data)
   vis_pointcloud: true
 
+  #  obstacle horizon
+  # use it based on the rooms you are operating in
+  # obstacle_horizon should be more than min path range
+  obstacle_horizon: 3.5 
+  min_path_range: 1
+
+
+  # scales the paths and distances. low pathScale means path elongation and vice-versa.
+
+  initial_path_scale: 1.0 # 1.0
+  min_path_scale: 0.75
+  path_scale_step: 0.25
