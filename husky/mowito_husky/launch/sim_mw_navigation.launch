@@ -15,7 +15,6 @@
     <arg name="phi" default="0.0"/>
 
     <arg name="laser_enabled" default="true"/>
-    <arg name="kinect_enabled" default="false"/>
     <arg name="realsense_enabled" default="false"/>
     <arg name="velodyne_enabled" default="false"/>
 
@@ -35,7 +34,6 @@
     <param name="robot_description" command="$(find xacro)/xacro '$(find husky_description)/urdf/husky.urdf.xacro'
       robot_namespace:=$(arg robot_namespace)
       laser_enabled:=$(arg laser_enabled)
-      kinect_enabled:=$(arg kinect_enabled)
       realsense_enabled:=$(arg realsense_enabled)
       velodyne_enabled:=$(arg velodyne_enabled)" />
 
