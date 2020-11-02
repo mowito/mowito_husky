@@ -1,0 +1,3 @@
+[submodule "husky/LMS1xx"]
+	path = husky/LMS1xx
+	url = https://github.com/clearpathrobotics/LMS1xx.git
