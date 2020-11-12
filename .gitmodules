@@ -1,3 +1,7 @@
 [submodule "husky/LMS1xx"]
 	path = husky/LMS1xx
 	url = https://github.com/clearpathrobotics/LMS1xx.git
+[submodule "husky/robot_localization"]
+	path = husky/robot_localization
+	url = https://github.com/cra-ros-pkg/robot_localization
+	branch = noetic-devel
