@@ -1,5 +1,20 @@
 # mowito_husky
 
+## Husky for noetic
+
+Clone the interactive_marker_twist_server repo. The branch should be kinetic-devel (by default)
+
+``` $ git clone https://github.com/ros-visualization/interactive_marker_twist_server.git ```
+
+Clone the LMS1xx repo. he branch should be noetic-devel (by default) 
+
+``` $ git clone https://github.com/clearpathrobotics/LMS1xx.git```
+
+Clone the roslint repo. he branch should be master (by default)
+
+```$ git clone https://github.com/ros/roslint.git ```
+
+
 ## For Mapping
 
 In a terminal (Source the files)
